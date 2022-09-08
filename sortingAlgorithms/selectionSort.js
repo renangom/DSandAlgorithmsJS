@@ -1,4 +1,9 @@
-
+//O selection sort funciona basicamente como uma função que acha o menor valor de um array
+//Achamos o menor valor do array em todo seu intervalo
+//Colocamos esse menor valor no ínicio do array
+//Logo após, mudamos o intervalo do array, ou seja, excluímos o menor valor já achado
+//Então achamos o novo menor valor do intervalo e colocamos na próxima posição
+//Fazemos isso em todo o array
 function selectionSort(array){
     for(let i = 0; i < array.length; i++){
         let menor = i;
