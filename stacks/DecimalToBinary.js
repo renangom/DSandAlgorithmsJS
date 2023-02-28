@@ -1,4 +1,5 @@
-function decimalToBinary(decNumber) {
+import Stack from "./stack2";
+ function decimalToBinary(decNumber) {
     const remStack = new Stack();
     let number = decNumber;
     let rem;
@@ -14,3 +15,7 @@ function decimalToBinary(decNumber) {
 
     return binaryString;
 }
+
+console.log(decimalToBinary(233))
+console.log(decimalToBinary(10))
+console.log(decimalToBinary(423))

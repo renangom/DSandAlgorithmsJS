@@ -1,4 +1,21 @@
-//ao invés de utilizarmos um array, vamos utilizar um objeto
+//ao invés de utilizarmos um array, vamos utilizar um objet
+
+function decimalToBinary(decNumber) {
+    const remStack = new Stack();
+    let number = decNumber;
+    let rem;
+    let binaryString = '';
+    while(number > 0) {
+        rem = Math.floor(number % 2);
+        remStack.push(rem);
+        number = Math.floor(number / 2);
+    }
+    while (!remStack.isEmpty()){
+        binaryString += remStack.pop().toString();
+    }
+
+    return binaryString;
+}
 
 class Stack{
     constructor(){
@@ -62,7 +79,6 @@ class Stack{
     
 }
 
-const stack = new Stack();
-console.log(Object.getOwnPropertyNames(stack));
-console.log(Object.keys(stack));
-console.log(stack.items);
+console.log(decimalToBinary(233))
+console.log(decimalToBinary(10))
+console.log(decimalToBinary(423))
