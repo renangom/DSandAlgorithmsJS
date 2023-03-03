@@ -58,3 +58,10 @@ class Queue {
         return objString;
     }
 }
+
+
+const queue = new Queue();
+console.log(queue.isEmpty());
+queue.enqueue('John');
+queue.enqueue('Renan');
+console.log(queue.toString());
